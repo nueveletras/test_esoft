@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test Esoft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="./8033575_Andres-Tenelanda_2018-10-25.js"></script>
+    
+</head>
+<body>
+    <div align="center">
+        <h1 id="matriz"></h1>
+        <p id="nums"></p>
+        <h3>Totales Columnas</h3>
+        <p id="totals"></p>
+        <h3>Promedio columnas pares</h3>
+        <h2 id="pair"></h2>
+        <h3>Numero de columnas impares mayor al promedio de las pares</h3>
+        <h2 id="result"></h2>
+        <h3>Presione F5 para una nueva matriz</h3>
+    </div>
+
+    <script>
+    var txt;
+    var n = prompt("Porfavor ingrese el numero de filas (mayor a 2):", 3);
+    var m = prompt("Porfavor ingrese el numero de columnas (mayor a dos):", 3);
+    if (n == null || n == "" || m == null || m == "") {
+        alert("No ha ingresado alguno o ambos datos, por favor refresque la pantalla")
+        document.getElementById("matriz").innerHTML = "Falta alguno de los datos por favor refresque la pantalla"
+    } else {
+        if (n<=2 || m<=2) {
+            alert("uno de los datos o ambos es menor a dos")
+            document.getElementById("matriz").innerHTML = "alguno de los números o ambos, es menor o igual a 2(dos) presione F5"
+        }else{
+            var txt = "";
+            var totalCol,z;
+            var totals = [];
+            var aux, pairProm;
+            var pairCols = oddCols = count1 = count2 = 0;
+            var nums = Array.matrixRandom(n,m);
+            document.getElementById("nums").innerHTML = txt;    
+            document.getElementById("totals").innerHTML = totals.join(" | ");    
+            document.getElementById("matriz").innerHTML = "Matriz " + n + " x " + m;
+            document.getElementById("result").innerHTML = count2;    
+            document.getElementById("pair").innerHTML = pairProm;
+        }
+        
+    } 
+       
+    </script>
+</body>
+</html>
